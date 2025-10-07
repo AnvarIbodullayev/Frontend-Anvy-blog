@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
+🌐 Frontend — Blog Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend of a full-stack blogging platform built with React + TypeScript + Vite.
+Users can sign up, create posts, view global posts, manage their profile, and admins can control users 👑.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔐 Authentication: Sign up, sign in, and manage passwords using JWT tokens.
 
-## React Compiler
+🧑‍💻 User Dashboard: View and edit your own posts.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🌍 Global Feed: Explore posts from all users.
 
-## Expanding the ESLint configuration
+🧾 Each Post Page: Detailed post view with author info.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🧰 Admin Panel: Manage users, change roles, or delete them.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🌗 Dark / Light Mode: Built-in theme toggle with next-themes.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🧩 Modern UI: Uses Radix UI, TailwindCSS, and Shadcn components.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+⚡ State Management: Powered by Zustand.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🪄 API Communication: Axios with token handling.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🛠️ Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+React 19 + TypeScript
+
+React Router DOM v7
+
+TailwindCSS v4
+
+Radix UI + Shadcn components
+
+Axios for API calls
+
+Zustand for state management
+
+Vite for fast builds
+
+🧰 Setup
+
+
+
+
+🧑‍💻 Author
+
+Developed with ❤️ by RAID
