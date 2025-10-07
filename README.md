@@ -1,4 +1,4 @@
-🌐 Frontend — Blog Platform
+🌐 Frontend — Blog Anvy2.0
 
 This is the frontend of a full-stack blogging platform built with React + TypeScript + Vite.
 Users can sign up, create posts, view global posts, manage their profile, and admins can control users 👑.
