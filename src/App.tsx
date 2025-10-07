@@ -9,6 +9,9 @@ import PageNotFound from './pages/404'
 import Profile from './pages/Profile'
 import ForgotPassword from './pages/ForgotPassword'
 import ChangePassword from './pages/ChangePassword'
+import MyPosts from './pages/MyPosts'
+import GlobalField from './pages/GlobalField'
+import EachPost from './pages/EachPost'
 
 function App() {
 
@@ -25,6 +28,11 @@ function App() {
           <Route path="changepassword" element={<ChangePassword />} />
           <Route path="signin" element={<SignIn />} />
           <Route path="signup" element={<SignUp />} />
+
+          {/* blog posts */}
+          <Route path="myposts" element={<MyPosts />} />
+          <Route path="globalfield" element={<GlobalField />} />
+          <Route path="eachpost/:id" element={<EachPost />} />
 
           {/* 404 */}
           <Route path="*" element={<PageNotFound />} />

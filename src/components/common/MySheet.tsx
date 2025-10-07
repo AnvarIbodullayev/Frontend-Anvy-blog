@@ -14,7 +14,7 @@ import { useState } from "react";
 import api from "@/utils/axios";
 import { toast } from "sonner";
 
-interface postRes {
+interface postsI {
   message: string;
 }
 
@@ -25,16 +25,9 @@ export function MySheet() {
 
   const handlePost = async () => {
     try {
-      const formData = new FormData();
-      formData.append("title", title);
-      formData.append("content", content);
-      if (file) formData.append("image", file);
+      const res = await api.post<postsI>(`/post/create`, { title, content, file })
 
-      const res = await api.post<postRes>("/post/create", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
-
-      toast.success(res.data.message);
+      toast.success(res.data.message)
     } catch (error: any) {
       toast.error(error.response?.data?.message || "Something went wrong");
     }
@@ -68,7 +61,7 @@ export function MySheet() {
             <Textarea
               title="content"
               onChange={(e) => setContent(e.target.value)}
-              rows={8}
+              rows={14}
               id="post-content"
               placeholder="Write your post here..."
             />
