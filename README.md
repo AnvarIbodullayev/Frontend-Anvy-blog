@@ -44,6 +44,6 @@ Vite for fast builds
 
 
 
-🧑‍💻 Author
+🧑‍💻 Author Anvar Ibodullayev
 
 Developed with ❤️ by RAID
